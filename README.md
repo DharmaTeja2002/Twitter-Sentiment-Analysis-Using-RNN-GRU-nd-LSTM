@@ -1,36 +1,46 @@
-# Twitter-Sentiment-Analysis-Using-RNN-and-LSTM
-This repo contains a complete end-to-end pipeline for Twitter Sentiment Analysis leveraging deep learning models — specifically Bidirectional RNN and LSTM architectures — to classify tweets into positive, neutral, and negative sentiments.
+Twitter Sentiment Analysis Using RNN, GRU & LSTM -
 
-🚀 What’s Inside?
-1. Data Preprocessing: Clean, tokenize, and pad tweets for efficient input into neural networks.
-2. Label Encoding: Converting categorical sentiments into machine-readable formats with one-hot encoding.
+This repository contains a complete end-to-end deep learning pipeline for Twitter Sentiment Analysis, using powerful recurrent architectures like Bidirectional RNN, GRU, and LSTM to classify tweets into positive, neutral, and negative sentiments.
+
+What’s Inside?
+1. Data Preprocessing - Clean, tokenize, and pad raw tweets to make them digestible for neural networks.
+2. Label Encoding - Sentiments are one-hot encoded for multiclass classification (positive/neutral/negative).
 
 Model Architectures:
-1. Bidirectional Simple RNN: Captures context from both past and future tokens with regularization techniques to minimize overfitting.
-2. LSTM Model: Enhanced sequence learning using LSTM layers to improve long-term dependencies and accuracy.
-3. Training Setup: Early stopping callbacks to prevent overfitting and ensure optimal model performance.
-4. Evaluation: Detailed accuracy and loss tracking on both validation and test sets, achieving strong performance:
-         RNN: ~89% accuracy
-         LSTM: ~92% accuracy — clear proof that memory helps!
+1. Bidirectional Simple RNN - 
+Captures context from both past and future words with regularization to reduce overfitting.
+Accuracy: ~89%
 
-5. Performance Visualization: Includes confusion matrices and classification reports for deep insights into model strengths and weaknesses.
+2. Bidirectional GRU - 
+Combines performance with efficiency, great for capturing sequence dependencies without being too heavy.
+Accuracy: ~90.2%
 
-📈 Why This Matters?
-Sentiment analysis is a cornerstone of modern NLP applications — from brand monitoring to social media analytics and customer feedback analysis. This project demonstrates how classic recurrent networks can still pack a punch when tuned right, while LSTMs elevate the performance by understanding sequence context better.
+3. Bidirectional LSTM -
+The memory wizard. Handles long-term dependencies like a champ, leading to the best performance.
+Accuracy: ~92%
 
-🛠️ Tools & Technologies
-1. Python, TensorFlow/Keras
-2. Scikit-learn for preprocessing and evaluation
-3. Pandas, NumPy for data handling
-4. Matplotlib & Seaborn for visualizations
+Training Setup:
+1. Includes early stopping callbacks and dropout layers to control overfitting.
+2. Fine-tuned architectures with L2 regularization and proper batch sizes.
 
-🔍 Dataset
-Sourced from Kaggle: Twitter Entity Sentiment Analysis
+Evaluation Metrics:
+1. Accuracy, confusion matrices, and classification reports to give a clear picture of model performance.
 
-How to Run:
-1. Clone the repo
-2. Install dependencies
-3. Prepare your dataset with preprocessing steps
-4. Train the models (RNN or LSTM)
-5. Evaluate on test data
-6. Explore insights and tweak hyperparameters to improve performance
+Visualization:
+1. Loss and accuracy plots across epochs
+2. Heatmaps for confusion matrices
+
+Why This Project Matters ?
+Sentiment analysis is the backbone of:
+1. Social media monitoring 
+2. Customer feedback systems 
+3. Brand and reputation management 
+
+This project shows how classic RNNs, efficient GRUs, and powerful LSTMs can turn noisy tweet data into meaningful insights — even without transformer-level complexity.
+
+Tools & Technologies:
+1. Python, TensorFlow / Keras
+2. Scikit-learn for preprocessing and metrics
+3. NumPy, Pandas for data wrangling
+4. Matplotlib, Seaborn for visualizations
+
