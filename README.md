@@ -1,46 +1,108 @@
-Twitter Sentiment Analysis Using RNN, GRU & LSTM -
+# 🧠 Twitter Sentiment Analysis Using RNN, GRU & LSTM
 
-This repository contains a complete end-to-end deep learning pipeline for Twitter Sentiment Analysis, using powerful recurrent architectures like Bidirectional RNN, GRU, and LSTM to classify tweets into positive, neutral, and negative sentiments.
+This repository provides a complete end-to-end deep learning pipeline for **Twitter Sentiment Analysis** using **Bidirectional RNN**, **GRU**, and **LSTM** models to classify tweets into **positive**, **neutral**, and **negative** sentiments.
 
-What’s Inside?
-1. Data Preprocessing - Clean, tokenize, and pad raw tweets to make them digestible for neural networks.
-2. Label Encoding - Sentiments are one-hot encoded for multiclass classification (positive/neutral/negative).
+---
 
-Model Architectures:
-1. Bidirectional Simple RNN - 
-Captures context from both past and future words with regularization to reduce overfitting.
-Accuracy: ~89%
+## 🚀 What’s Inside?
 
-2. Bidirectional GRU - 
-Combines performance with efficiency, great for capturing sequence dependencies without being too heavy.
-Accuracy: ~90.2%
+1. **Data Preprocessing**
+   - Tweets are cleaned, tokenized, and padded for input into deep learning models.
 
-3. Bidirectional LSTM -
-The memory wizard. Handles long-term dependencies like a champ, leading to the best performance.
-Accuracy: ~92%
+2. **Label Encoding**
+   - Sentiment labels are converted into one-hot encoded vectors for multi-class classification.
 
-Training Setup:
-1. Includes early stopping callbacks and dropout layers to control overfitting.
-2. Fine-tuned architectures with L2 regularization and proper batch sizes.
+3. **Model Architectures**
+   - ✅ **Bidirectional RNN**  
+     Captures both forward and backward context. Regularization included to reduce overfitting.  
+     _Accuracy: ~89.1%_
 
-Evaluation Metrics:
-1. Accuracy, confusion matrices, and classification reports to give a clear picture of model performance.
+   - ✅ **Bidirectional GRU**  
+     Lighter and faster alternative to LSTM, captures sequential dependencies efficiently.  
+     _Accuracy: ~90.2%_
 
-Visualization:
-1. Loss and accuracy plots across epochs
-2. Heatmaps for confusion matrices
+   - ✅ **Bidirectional LSTM**  
+     Excels in modeling long-term dependencies and improves performance significantly.  
+     _Accuracy: ~92.0%_
 
-Why This Project Matters ?
-Sentiment analysis is the backbone of:
-1. Social media monitoring 
-2. Customer feedback systems 
-3. Brand and reputation management 
+4. **Training Setup**
+   - Dropout, L2 regularization, and EarlyStopping to improve generalization and reduce overfitting.
 
-This project shows how classic RNNs, efficient GRUs, and powerful LSTMs can turn noisy tweet data into meaningful insights — even without transformer-level complexity.
+5. **Evaluation Metrics**
+   - Accuracy, Confusion Matrix, Classification Report for comprehensive model assessment.
 
-Tools & Technologies:
-1. Python, TensorFlow / Keras
-2. Scikit-learn for preprocessing and metrics
-3. NumPy, Pandas for data wrangling
-4. Matplotlib, Seaborn for visualizations
+6. **Visualization**
+   - Training/validation loss and accuracy plots  
+   - Confusion matrix heatmaps
 
+---
+
+## 📈 Why This Project Matters
+
+Sentiment analysis is key to:
+- Social media monitoring
+- Customer service automation
+- Product feedback analysis
+- Brand reputation management
+
+This project shows that even without transformers, **RNN-based models still rock** when tuned right. GRUs and LSTMs offer increasing accuracy with deeper memory modeling.
+
+---
+
+## 🛠️ Tools & Technologies
+
+- **Programming Language**
+  - Python 3.x
+
+- **Deep Learning**
+  - TensorFlow / Keras (Sequential API, Embedding, GRU, LSTM, RNN)
+
+- **Model Utilities**
+  - EarlyStopping (Keras callbacks)
+  - Dropout & L2 Regularization
+  - Bidirectional Layers
+
+- **Data Preprocessing**
+  - `nltk` (stopwords, tokenization)
+  - `re` (regex for text cleaning)
+  - `tensorflow.keras.preprocessing.text` (Tokenizer)
+  - `tensorflow.keras.preprocessing.sequence` (pad_sequences)
+  - `sklearn.preprocessing` (LabelEncoder, OneHotEncoder)
+
+- **Evaluation**
+  - `sklearn.metrics` (classification_report, confusion_matrix, accuracy_score)
+
+- **Data Handling**
+  - `NumPy`
+  - `Pandas`
+
+- **Visualization**
+  - `Matplotlib`
+  - `Seaborn`
+---
+
+## 🔍 Dataset
+
+- **Source**: Kaggle  
+  **Dataset**: Twitter Entity Sentiment Analysis  
+  - Consists of tweets labeled as `positive`, `neutral`, or `negative`.
+---
+
+## 📦 How to Run
+
+1. **Clone the Repo**
+2. **Install Dependencies**
+3. **Preprocess the Dataset**
+4. **Train the Model**
+5. **Evaluate the Model**
+6. **Make Predictions on New Tweets**
+
+---
+
+## 📊 Model Accuracy Comparison
+
+| Model          | Accuracy |
+|----------------|----------|
+| RNN            | ~89.1%   |
+| **GRU**        | ~90.2%   |
+| **LSTM**       | ~92.0%   |
